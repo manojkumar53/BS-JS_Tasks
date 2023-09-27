@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js Task-2</title>
+</head>
+<body>
+<p>Enter String:&nbsp<input type="text" id="num"></p>
+<button type="submit" onclick="cal()">Alphabetic Order </button>
+<p id="output"></p>
+<script>
+function cal(){
+let a=document.getElementById("num").value;
+function alpha(str) {
+
+    var arr = str.split(""); 
+    res = arr.sort().join("");
+    return res;
+  }
+  let b=alpha(a);
+  document.getElementById("output").innerHTML=b;
+
+}
+</script>
+</body>
+</html>

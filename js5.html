@@ -1,0 +1,46 @@
+<html>
+<head><title>Js Task-5</title>
+<style>
+#bo{
+border-color:red;
+}
+div{
+border:2px solid black;
+margin-left:500px;
+margin-top:200px;
+width:20%;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<div>
+<form onsubmit="return validate()">
+Name:<input type="text"  id="na"> <span id="n1" style="color:red"></span></br></br>
+Email:<input type="text" id="em"><span id="n2" style="color:red"></span></br></br>
+website:<input type="text"  id="web"><span id="n3" style="color:red"></span></br></br>
+Message:<textarea cols="20" rows="6"  id="mes"></textarea><span id="n4" style="color:red"></span></br></br>
+<center><input type="submit" value="submit"></center>
+</form>
+</div>
+<script>
+function validate(){
+let na=document.getElementById("na").value;
+let em=document.getElementById("em").value;
+let web=document.getElementById("web").value;
+let mes=document.getElementById("mes").value;
+if(na=="" || em=="" || web=="" || mes==""){
+document.getElementById("na").style.border="thin solid red";
+document.getElementById("n1").innerHTML="This field is required";
+document.getElementById("em").style.border="thin solid red";
+document.getElementById("n2").innerHTML="A valid email address is required";
+document.getElementById("web").style.border="thin solid red";
+document.getElementById("n3").innerHTML="A valid url is required";
+document.getElementById("mes").style.border="thin solid red";
+document.getElementById("n4").innerHTML="This field is required";
+
+return false;}
+else{return true;}
+}</script>
+</body>
+</html>

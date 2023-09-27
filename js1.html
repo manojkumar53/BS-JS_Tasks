@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js Task-1</title>
+</head>
+<body>
+<p>Enter number:&nbsp<input type="text" id="num"></p>
+<button type="submit" onclick="cal()">Reverse </button>
+<p id="output"></p>
+<script>
+function cal(){
+let a=document.getElementById("num").value;
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+let b=reverseString(a);
+document.getElementById("output").innerHTML=b;
+}
+</script>
+</body>
+</html>

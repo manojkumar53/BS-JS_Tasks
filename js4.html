@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js Task-4</title>
+</head>
+<body>
+<button type="submit" onclick="date()">show date</button>
+<p id="date"></p>
+<button type="submit"onclick="time()">show Time</button>
+<p id="time"></p>
+
+<script>
+function date(){
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; // Months start at 0!
+let dd = today.getDate();
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+const formattedToday = dd + '/' + mm + '/' + yyyy;
+document.getElementById('date').innerHTML = formattedToday;
+}
+function time(){
+const date=new Date();
+document.getElementById("time").innerHTML=date;
+}
+
+</script>
+</body>
+<html>
